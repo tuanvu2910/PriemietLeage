@@ -4,7 +4,7 @@ let Textandtake = function (text) {
     this.Display = function () {
         let get1 = document.getElementById("list");
         for (i = 0; i < 20; i++) {
-            this.text = "<li  class ='team'> <img style='width: 30px;height: 30px' src='"+PMLdata[i].icon+"'>" + "&nbsp&nbsp "+ PMLdata[i].name + "</li>" + "</br>";
+            this.text = "<li  class ='team'> <img class='zoom' style='width: 30px;height: 30px' src='"+PMLdata[i].icon+"'>" + "&nbsp&nbsp "+ PMLdata[i].name + "</li>" + "</br>";
             get1.innerHTML += this.text;
         }
     }

@@ -74,6 +74,17 @@
         background-color: gray;
         color: white;
     }
+    .zoom {
+
+        transition: transform .2s;
+        margin: 0 auto;
+    }
+
+    .zoom:hover {
+        -ms-transform: scale(3.0); /* IE 9 */
+        -webkit-transform: scale(3.0); /* Safari 3-8 */
+        transform: scale(3.0);
+    }
 </style>
 <body onload>
 <table style="width:100%; bolder-collapse:collapse;" border="1">
@@ -107,7 +118,7 @@
             this.text = `<tr id='top${i}'><td><img style='width: 50px;height: 50px' src='${PMLdata[i].icon}'</td>
             <td><h2>${PMLdata[i].name}</h2></td>
             <td><h2>${PMLdata[i].Point}</h2></td>
-            <td><img  style='width: 150px;height: 50px' src='${PMLdata[i].svd}'</td></tr>`;
+            <td><img  class="zoom" style='width: 200px;height:100px' src='${PMLdata[i].svd}'</td></tr>`;
             get1.innerHTML += this.text;
         }
     }
