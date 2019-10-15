@@ -49,7 +49,31 @@
         opacity: 0.9;
         width: 700px;
     }
+    #print td {
+        padding: 10px 10px;
+        border: 1px solid;
+    }
 
+    table#print {
+        margin: 0 0;
+        width: 100%;
+    }
+
+    #print h2 {
+        text-align: center;
+    }
+    #top0, #top1,#top2,#top3{
+        background-color: green;
+        color: white;
+    }
+    #top4,#top5{
+        background-color: orange;
+        color: white;
+    }
+    #top17,#top18,#top19 {
+        background-color: gray;
+        color: white;
+    }
 </style>
 <body onload>
 <table style="width:100%; bolder-collapse:collapse;" border="1">
@@ -75,18 +99,19 @@
             
         });
         let get1 = document.getElementById("print");
-        get1.innerHTML +="<tr><td><h2>Icon</h2><td><td><h2>Team</h2></td><td><h2>Point</h2></td><td><h2>Stadium</h2></td></tr>"
+        get1.innerHTML +="<tr><td><h2>Icon</h2></td>" +
+            "<td><h2>Team</h2></td>" +
+            "<td><h2>Point</h2></td>" +
+            "<td><h2>Stadium</h2></td></tr>"
         for (i = 0; i < 20; i++) {
-            this.text = "<tr><td><img style='width: 50px;height: 50px' src='" + PMLdata[i].icon + "'</td>"
-                + "<td><h2>" + PMLdata[i].name + "</h2></td>" +
-                "<td><h2>" + PMLdata[i].Point + "</h2></td>"+
-            "<td><img  style='width: 150px;height: 50px' src='"+  PMLdata[i].svd +"'</td></tr>"
-            ;
+            this.text = `<tr id='top${i}'><td><img style='width: 50px;height: 50px' src='${PMLdata[i].icon}'</td>
+            <td><h2>${PMLdata[i].name}</h2></td>
+            <td><h2>${PMLdata[i].Point}</h2></td>
+            <td><img  style='width: 150px;height: 50px' src='${PMLdata[i].svd}'</td></tr>`;
             get1.innerHTML += this.text;
         }
     }
-    Display()
-
+    Display();
 </script>
 </body>
 </html>
