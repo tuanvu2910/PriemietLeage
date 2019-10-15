@@ -47,7 +47,7 @@ let Choice = function (text,text1) {
 
 };
  function gotoresult() {
-     window.location.assign("http://localhost:63342/PriemietLeage/Result.html?"+PMLdata[index].id+'-'+PMLdata[index1].id);
+     window.location.assign("Result.html?"+PMLdata[index].id+'-'+PMLdata[index1].id);
      take1(PMLdata[index].id,PMLdata[index1].id);
  }
 

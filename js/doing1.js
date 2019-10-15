@@ -11,7 +11,7 @@ let Textandtake = function (text) {
     this.Display2 = function () {
         let get2 = document.getElementById("list2");
         for (j = 0;j<20;j++) {
-            this.text = "<td>" + "<p>"+"<a class='stanfButton' href='http://localhost:63342/PriemietLeage/ImformationLiverpool.html?"+parseInt(j+1)+"'>"+ '<img  onmouseover="MouseDo.ShowUp'+j+'()" id='+j+' src="' + PMLdata[j].icon + '" height="150px" width="150px">' + "</img></a>" +
+            this.text = "<td>" + "<p>"+"<a class='stanfButton' href='ImformationLiverpool.html?"+parseInt(j+1)+"'>"+ '<img  onmouseover="MouseDo.ShowUp'+j+'()" id='+j+' src="' + PMLdata[j].icon + '" height="150px" width="150px">' + "</img></a>" +
                 "</td>"+'<img style="display:none" onmouseover="MouseDo.GetBack'+j+'()" id="img'+j+'"'+'src="'+PMLdata[j].Information+'" width="300"height="200">';
             get2.innerHTML += this.text;
         }
